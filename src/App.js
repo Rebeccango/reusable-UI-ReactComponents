@@ -20,7 +20,7 @@ showModal = e =>{
       <div className="App">
         <h1>Reduce Reuse ReCycle React Components</h1>
         <button onClick ={e =>{this.showModal();}}>show Modal</button>
-        <Modal show={this.state.show}/>
+        <Modal show={this.state.show}>This is the message in the Modal baby, come come come on in and let me out</Modal>
       </div>
     );
   }
