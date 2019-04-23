@@ -4,11 +4,26 @@ import React from 'react';
 
 export default class Modal extends React.Component{
 
+    // onClose = e =>{this.props.onClose && this.props.onClose(e)};
+
+    onClose = e => {
+      this.props.onClose(e);
+    };
+
     render(){
 
         if(!this.props.show){
             return null;
         }
-        return <div>{this.props.children}</div>
+        return (
+            <div class='ModalWrapper'>
+                <div>{this.props.children}</div>
+                <div>
+                    <button onClick = {e =>{this.onClose(e)}}>
+                        close
+                    </button>
+                </div>
+            </div>
+        )
     }
 }
