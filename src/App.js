@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../src/styles/App.css';
+import '../src/styles/modal.css';
 
 // components
 import Modal from './components/Modal';
@@ -18,8 +19,8 @@ showModal = e =>{
   render() {
     return (
       <div className="App">
-        <h1>Reduce Reuse ReCycle React Components</h1>
-        <button onClick ={e =>{this.showModal();}}>show Modal</button>
+        {/* <h1>Reduce Reuse ReCycle React Components</h1> */}
+        <button class='toggle-button' id='centered-toggle-button' onClick ={e =>{this.showModal(e);}}>show Modal</button>
         <Modal show={this.state.show}
                onClose={this.showModal}>This is the message in the Modal baby, come come come on in and let me out</Modal>
       </div>
